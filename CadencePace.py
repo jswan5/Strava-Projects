@@ -22,7 +22,7 @@ print(data.describe())
 corr = data.corr()
 
 # plt.figure(1)
-# plt.ylabel("Cadence (SPM)")
+# plt.ylabel("Cadence (RPM)")
 # plt.hist(data["cad"], bins=100)
 # plt.figure(2)
 # plt.ylabel("Heart Rate (RPM)")
@@ -30,6 +30,9 @@ corr = data.corr()
 # plt.figure(3)
 # plt.ylabel("Speed (kph)")
 # plt.boxplot(data["kph"])
+plt.xlabel("Cadence (RPM)")
+plt.ylabel("Speed (kph)")
+plt.scatter(data["cad"],data["kph"])
 
 
 y = data["kph"]
